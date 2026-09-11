@@ -38,6 +38,28 @@ Every installable package must have:
 Manifest metadata, runtime version strings, update-feed version, release tag, and
 release asset name must describe the same release.
 
+## Attribution preservation rule
+
+For maintained, modernized, ported, or forked extensions, Koelman Labs must
+preserve the historical project record.
+
+That means:
+
+- do not remove original author names merely because Koelman Labs maintains a
+  newer Joomla line;
+- do not replace existing copyright notices with a Koelman Labs-only notice;
+- preserve contributor credits where they are already part of the project;
+- preserve third-party attribution and license notices;
+- distinguish clearly between **original authorship** and **current
+  maintenance**;
+- only describe an ownership transfer, official succession, or official project
+  status when that has actually been agreed by the relevant project owner.
+
+Where a Joomla manifest has only one practical author field, preserving the
+original author/project attribution takes priority. Koelman Labs maintenance can
+be stated in the README, release notes, documentation, or other metadata without
+rewriting project history.
+
 ## License and provenance
 
 A public package must include the applicable license text when redistribution
