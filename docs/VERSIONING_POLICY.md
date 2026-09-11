@@ -1,17 +1,26 @@
 # Versioning Policy
 
-Koelman Labs Joomla extensions use explicit extension versions independent of the Joomla CMS version.
+Koelman Labs Joomla extensions use explicit extension versions independent of
+the Joomla CMS version.
 
-For uddeIM:
+## General rules
 
-- upstream/current historical base: 5.6.3;
-- Joomla 6 Enhanced line: 6.0.x;
-- first stable target: 6.0.0.
+- The extension version identifies the extension release.
+- Joomla compatibility is declared separately.
+- A version must not be reused for different package bytes.
+- A correction to a published artifact requires a new version.
+- Pre-release identifiers such as `alpha`, `beta`, and `rc` are allowed.
+- Stable and pre-release channels must be clearly distinguishable.
 
-Recommended progression:
+Recommended progression where appropriate:
 
-`6.0.0-alpha1` -> `6.0.0-beta1` -> `6.0.0-rc1` -> `6.0.0`
+`X.Y.Z-alpha1 -> X.Y.Z-beta1 -> X.Y.Z-rc1 -> X.Y.Z`
 
-A version number identifies the extension release. Joomla compatibility is declared separately in the update feed through `targetplatform`.
+The major version does not automatically mean compatibility with the same Joomla
+major version. Compatibility remains independently test-backed.
 
-Do not infer compatibility with a future Joomla minor merely because it shares the same major version.
+## uddeIM Joomla 6 Enhanced example
+
+- historical upstream base used for migration testing: `5.6.3`;
+- Joomla 6 Enhanced release line: `6.0.x`;
+- first stable target: `6.0.0`.
