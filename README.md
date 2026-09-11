@@ -1,6 +1,6 @@
 # Koelman Labs — Joomla Distribution
 
-Public distribution repository for Joomla extensions maintained by Koelman Labs.
+Public distribution repository for Joomla extensions maintained or distributed by Koelman Labs.
 
 ## Purpose
 
@@ -20,7 +20,7 @@ Release packages are published as GitHub Release assets rather than committed to
 
 | Extension | Feed | Status |
 | --- | --- | --- |
-| uddeIM | `updates/com_uddeim.xml` | Foundation prepared; no release advertised yet |
+| uddeIM Joomla 6 Enhanced | `updates/com_uddeim.xml` | Foundation prepared; no release advertised yet |
 
 ## Repository contract
 
@@ -35,3 +35,11 @@ See:
 - `docs/RELEASE_POLICY.md`
 - `docs/VERSIONING_POLICY.md`
 - `docs/JOOMLA_COMPATIBILITY.md`
+
+## uddeIM provenance
+
+uddeIM is an established open-source Joomla project originally maintained by Stephan Slabihoud, with earlier work by Benjamin Zweifel and other contributors credited in the source.
+
+The Koelman Labs distribution work covers the community-maintained Joomla 6 Enhanced line, its Joomla-native update metadata, release assets, compatibility evidence, and release documentation. Upstream authorship and license notices are preserved.
+
+Pre-release assets are explicitly marked as such and must not be described as stable releases.
