@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <updates>
-    <!--
-        uddeIM Joomla 6 distribution feed.
-
-        Intentionally empty until a real, tested GitHub Release asset exists.
-        Do not advertise a version before the package and compatibility gate are proven.
-    -->
+    <update>
+        <name>uddeIM 6.0.0 Beta 1</name>
+        <description>uddeIM Joomla 6 Enhanced pre-release</description>
+        <element>com_uddeim</element>
+        <type>component</type>
+        <version>6.0.0-beta1</version>
+        <infourl title="uddeIM 6.0.0 Beta 1 release notes">https://github.com/koelmanlabs/joomla-distribution/releases/tag/com_uddeim-6.0.0-beta1</infourl>
+        <downloads>
+            <downloadurl type="full" format="zip">https://github.com/koelmanlabs/joomla-distribution/releases/download/com_uddeim-6.0.0-beta1/com_uddeim-6.0.0-beta1-j6.zip</downloadurl>
+        </downloads>
+        <tags>
+            <tag>beta</tag>
+        </tags>
+        <maintainer>Koelman Labs</maintainer>
+        <maintainerurl>https://github.com/koelmanlabs/joomla-distribution</maintainerurl>
+        <targetplatform name="joomla" version="6\.(0|1)" />
+        <php_minimum>8.3.0</php_minimum>
+        <sha256>d4662fe6250b0bcfa24637da35d9d187e4eb9127b5c873ba67aa5e652e165f0f</sha256>
+    </update>
 </updates>
