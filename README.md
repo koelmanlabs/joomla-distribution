@@ -58,7 +58,7 @@ native Joomla discovery/download/install
 
 | Extension | Feed | Public status |
 | --- | --- | --- |
-| uddeIM Joomla 6 Enhanced | `updates/com_uddeim.xml` | `6.0.0-beta1` withdrawn from feed after native-unpack packaging failure; corrected prerelease pending |
+| uddeIM Joomla 6 Enhanced | `updates/com_uddeim.xml` | `6.0.0-beta2` portable package candidate GREEN; not yet published or advertised |
 
 More Joomla extensions can be added here later using the same release standard.
 
@@ -155,11 +155,11 @@ Current release direction:
 | Item | Status |
 | --- | --- |
 | Release line | `6.0.x` |
-| Current candidate | `6.0.0-beta1` |
+| Current candidate | `6.0.0-beta2` |
 | First stable target | `6.0.0` |
 | Joomla target | Joomla 6.0 / 6.1 |
 | PHP target | PHP 8.3+ |
-| Native update feed | Beta 1 withdrawn; corrected prerelease pending |
+| Native update feed | Empty pending beta2 publication |
 | Public beta release | `6.0.0-beta1` retained as immutable withdrawn prerelease |
 
 Canonical uddeIM update feed:
@@ -168,7 +168,7 @@ Canonical uddeIM update feed:
 https://raw.githubusercontent.com/koelmanlabs/joomla-distribution/main/updates/com_uddeim.xml
 ```
 
-The feed does not currently advertise a release. `6.0.0-beta1` remains published as an immutable withdrawn prerelease after Joomla-native testing proved a Windows ZIP path-separator packaging defect. The next advertised version will use portable forward-slash ZIP member paths and must pass Joomla-native discovery/download/unpack/checksum/install acceptance.
+The feed does not currently advertise a release. `6.0.0-beta1` remains published as an immutable withdrawn prerelease after Joomla-native testing proved a Windows ZIP path-separator packaging defect. `6.0.0-beta2` is now the portable package candidate and has passed the local forward-slash/extraction gate, but it is not yet published. After the exact beta2 asset is published and its SHA-256 is recorded in the feed, it must still pass Joomla-native discovery/download/unpack/checksum/install acceptance from 5.6.3.
 
 ## For Joomla administrators
 
