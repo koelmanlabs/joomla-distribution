@@ -58,7 +58,7 @@ native Joomla discovery/download/install
 
 | Extension | Feed | Public status |
 | --- | --- | --- |
-| uddeIM Joomla 6 Enhanced | `updates/com_uddeim.xml` | Foundation prepared; no release advertised yet |
+| uddeIM Joomla 6 Enhanced | `updates/com_uddeim.xml` | `6.0.0-beta1` published as pre-release; native discovery/install acceptance pending |
 
 More Joomla extensions can be added here later using the same release standard.
 
@@ -159,8 +159,8 @@ Current release direction:
 | First stable target | `6.0.0` |
 | Joomla target | Joomla 6.0 / 6.1 |
 | PHP target | PHP 8.3+ |
-| Native update feed | Prepared |
-| Public beta release | Not yet published |
+| Native update feed | Beta 1 advertised |
+| Public beta release | `6.0.0-beta1` published |
 
 Canonical uddeIM update feed:
 
@@ -168,8 +168,7 @@ Canonical uddeIM update feed:
 https://raw.githubusercontent.com/koelmanlabs/joomla-distribution/main/updates/com_uddeim.xml
 ```
 
-The feed intentionally remains empty until the exact accepted beta package has
-been published as a GitHub Release asset.
+The feed advertises the exact accepted `6.0.0-beta1` GitHub Release asset. The next gate is Joomla-native discovery, download, and install acceptance from an installed 5.6.3 baseline.
 
 ## For Joomla administrators
 
