@@ -58,7 +58,7 @@ native Joomla discovery/download/install
 
 | Extension | Feed | Public status |
 | --- | --- | --- |
-| uddeIM Joomla 6 Enhanced | `updates/com_uddeim.xml` | `6.0.0-beta2` portable package candidate GREEN; not yet published or advertised |
+| uddeIM Joomla 6 Enhanced | `updates/com_uddeim.xml` | `6.0.0-beta2` frozen candidate; Playwright package gate 1/1 PASS; publication pending |
 
 More Joomla extensions can be added here later using the same release standard.
 
@@ -168,7 +168,7 @@ Canonical uddeIM update feed:
 https://raw.githubusercontent.com/koelmanlabs/joomla-distribution/main/updates/com_uddeim.xml
 ```
 
-The feed does not currently advertise a release. `6.0.0-beta1` remains published as an immutable withdrawn prerelease after Joomla-native testing proved a Windows ZIP path-separator packaging defect. `6.0.0-beta2` is now the portable package candidate and has passed the local forward-slash/extraction gate, but it is not yet published. After the exact beta2 asset is published and its SHA-256 is recorded in the feed, it must still pass Joomla-native discovery/download/unpack/checksum/install acceptance from 5.6.3.
+The feed does not currently advertise a release. `6.0.0-beta1` remains published as an immutable withdrawn prerelease after Joomla-native testing proved a Windows ZIP path-separator packaging defect. `6.0.0-beta2` is now the frozen portable package candidate and has passed both the local forward-slash/extraction gate and the automated Playwright package gate (1/1 PASS), but it is not yet published. After the exact beta2 asset is published and its SHA-256 is recorded in the feed, it must still pass Joomla-native discovery/download/unpack/checksum/install acceptance from 5.6.3.
 
 ## For Joomla administrators
 
