@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<updates>
+    <!--
+        uddeIM Joomla 6 distribution feed.
+
+        Intentionally empty until a real, tested GitHub Release asset exists.
+        Do not advertise a version before the package and compatibility gate are proven.
+    -->
+</updates>
