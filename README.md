@@ -32,6 +32,8 @@ Release packages are published as GitHub Release assets rather than committed to
 
 See:
 
+- `docs/PUBLIC_RELEASE_STANDARD.md`
+- `docs/PUBLIC_RELEASE_CHECKLIST.md`
 - `docs/RELEASE_POLICY.md`
 - `docs/VERSIONING_POLICY.md`
 - `docs/JOOMLA_COMPATIBILITY.md`
