@@ -58,7 +58,7 @@ native Joomla discovery/download/install
 
 | Extension | Feed | Public status |
 | --- | --- | --- |
-| uddeIM Joomla 6 Enhanced | `updates/com_uddeim.xml` | `6.0.0-beta2` published as pre-release and advertised; native update gate pending |
+| uddeIM Joomla 6 Enhanced | `updates/com_uddeim.xml` | `6.0.0-beta2` published and advertised; native 5.6.3 → beta2 update gate GREEN |
 
 More Joomla extensions can be added here later using the same release standard.
 
@@ -159,7 +159,7 @@ Current release direction:
 | First stable target | `6.0.0` |
 | Joomla target | Joomla 6.0 / 6.1 |
 | PHP target | PHP 8.3+ |
-| Native update feed | Beta 2 advertised |
+| Native update feed | Beta 2 advertised and native update accepted |
 | Public beta release | `6.0.0-beta2` published; `6.0.0-beta1` retained as immutable withdrawn prerelease |
 
 Canonical uddeIM update feed:
@@ -195,3 +195,30 @@ Its job is narrower:
 
 > **publish Joomla extension releases in a way that is understandable,
 > verifiable, test-backed, and reusable across multiple projects.**
+
+
+## Native updater acceptance
+
+uddeIM 6.0.0-beta2 has now passed the Joomla-native update path from an
+installed uddeIM 5.6.3 baseline on the disposable Joomla 6.1.2 acceptance clone.
+
+Verified:
+
+- public feed discovery;
+- exact GitHub Release asset;
+- portable ZIP unpack;
+- checksum acceptance;
+- Joomla component update;
+- extension version 6.0.0-beta2;
+- extension ID preservation;
+- exact pre-update config backup;
+- semantic configuration preservation with zero mismatches;
+- processed update row removal;
+- enabled Koelman Labs update feed after update;
+- post-update administrator runtime health.
+
+The automated non-destructive post-state gate
+`J60-ENH-UPDATE-GITHUB-001D-POST` passed 1/1 in 5.7s.
+
+The full canonical regression baseline remains reserved for the promotion/stable
+release boundary.
