@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <updates>
-    <!--
-        uddeIM Joomla 6 distribution feed.
-
-        6.0.0-beta1 is intentionally not advertised.
-
-        The published beta1 asset was proven byte-identical after Joomla's
-        native download, but its Windows-built ZIP member paths use backslashes.
-        Joomla therefore aborts native archive extraction before checksum and
-        installer execution.
-
-        The beta1 release asset remains immutable for audit/history. A corrected
-        prerelease will be advertised under a new version after the portable ZIP
-        packaging gate is green.
-    -->
+    <update>
+        <name>uddeIM 6.0.0 Beta 2</name>
+        <description>uddeIM Joomla 6 Enhanced pre-release</description>
+        <element>com_uddeim</element>
+        <type>component</type>
+        <version>6.0.0-beta2</version>
+        <infourl title="uddeIM 6.0.0 Beta 2 release notes">https://github.com/koelmanlabs/joomla-distribution/releases/tag/com_uddeim-6.0.0-beta2</infourl>
+        <downloads>
+            <downloadurl type="full" format="zip">https://github.com/koelmanlabs/joomla-distribution/releases/download/com_uddeim-6.0.0-beta2/com_uddeim-6.0.0-beta2-j6.zip</downloadurl>
+        </downloads>
+        <tags><tag>beta</tag></tags>
+        <maintainer>Koelman Labs</maintainer>
+        <maintainerurl>https://github.com/koelmanlabs/joomla-distribution</maintainerurl>
+        <targetplatform name="joomla" version="6\.(0|1)" />
+        <php_minimum>8.3.0</php_minimum>
+        <sha256>33769b3e9f8942f2525e9cbf2c95d30f3f762f59a8759fc8aaf0926ef10418e0</sha256>
+    </update>
 </updates>
