@@ -58,7 +58,7 @@ native Joomla discovery/download/install
 
 | Extension | Feed | Public status |
 | --- | --- | --- |
-| uddeIM Joomla 6 Enhanced | `updates/com_uddeim.xml` | `6.0.0` stable published and advertised; final stable native updater acceptance pending |
+| uddeIM Joomla 6 Enhanced | `updates/com_uddeim.xml` | `6.0.0` stable published, advertised, and final native updater acceptance CLOSED GREEN |
 
 More Joomla extensions can be added here later using the same release standard.
 
@@ -159,7 +159,7 @@ Current release direction:
 | First stable target | `6.0.0` — achieved |
 | Joomla target | Joomla 6.0 / 6.1 |
 | PHP target | PHP 8.3+ |
-| Native update feed | Stable `6.0.0` advertised; final stable native updater acceptance pending |
+| Native update feed | Stable `6.0.0` advertised; final stable native updater acceptance CLOSED GREEN |
 | Public releases | `6.0.0` stable published; `6.0.0-beta2` retained as accepted prerelease; `6.0.0-beta1` retained as immutable withdrawn prerelease |
 
 Canonical uddeIM update feed:
@@ -168,7 +168,7 @@ Canonical uddeIM update feed:
 https://raw.githubusercontent.com/koelmanlabs/joomla-distribution/main/updates/com_uddeim.xml
 ```
 
-The update feed now advertises the exact stable `6.0.0` release asset. The frozen stable package passed exact-package portability, focused install/config-preservation acceptance, and the final full canonical regression at **98/98 PASS** on Joomla 6.1.2. `6.0.0-beta2` remains published as the accepted prerelease that previously proved the public Joomla-native updater path; `6.0.0-beta1` remains an immutable withdrawn prerelease after its Windows ZIP path-separator packaging defect. The remaining stable-release gate is Joomla-native public discovery/download/unpack/checksum/install acceptance against the exact `6.0.0` feed entry.
+The update feed now advertises the exact stable `6.0.0` release asset. The frozen stable package passed exact-package portability, focused install/config-preservation acceptance, the final full canonical regression at **98/98 PASS** on Joomla 6.1.2, and the final Joomla-native public updater acceptance from an official uddeIM 5.6.3 baseline. `6.0.0-beta2` remains published as the accepted prerelease that previously proved the public Joomla-native updater path; `6.0.0-beta1` remains an immutable withdrawn prerelease after its Windows ZIP path-separator packaging defect.
 
 ## For Joomla administrators
 
@@ -220,6 +220,37 @@ Verified:
 The automated non-destructive post-state gate
 `J60-ENH-UPDATE-GITHUB-001D-POST` passed 1/1 in 5.7s.
 
-The promotion/stable full canonical regression is now complete at **98/98 PASS**
-against uddeIM 6.0.0. The remaining release gate is the final Joomla-native
-public updater acceptance against the stable feed.
+The promotion/stable full canonical regression is complete at **98/98 PASS**
+against uddeIM 6.0.0. The final Joomla-native public updater acceptance from
+an official uddeIM 5.6.3 baseline is also CLOSED GREEN. The destructive update
+completed successfully; its only RED assertion was a fixture-only duplicate
+update-site mapping, classified TEST HARNESS. A non-destructive post-state gate
+then passed 1/1 and confirmed version 6.0.0, schema 5.6, cleared update rows,
+config backup/preservation, and healthy administrator runtime.
+
+## Stable 6.0.0 final native updater acceptance
+
+The final stable acceptance used a fresh disposable Joomla 6.1.2 clone with the
+exact official upstream uddeIM 5.6.3 component installed cleanly.
+
+The real Joomla-native update pipeline then completed:
+
+```text
+5.6.3 -> public Koelman Labs stable feed -> 6.0.0
+extension id   387 preserved
+schema         5.6 preserved
+update rows    cleared
+package bytes  1732775
+package sha256 f4e79efb182a9ff3b51e4a971607a374764d258d501622d9164d630e95e7fc7d
+```
+
+The destructive test stopped only on a fixture-side assertion that expected one
+update-site mapping while the disposable clone contained two rows pointing to
+the same enabled Koelman Labs feed. This was classified **TEST HARNESS /
+FIXTURE CONTAMINATION**. The updater was not rerun.
+
+The dedicated non-destructive closure gate
+`J60-ENH-UPDATE-GITHUB-001E-PUBLIC-POST` passed 1/1 in 5.0s and confirmed the
+successful 6.0.0 post-state.
+
+Public stable verdict: **FINAL / CLOSED GREEN**.
