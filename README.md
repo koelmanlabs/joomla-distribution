@@ -58,7 +58,7 @@ native Joomla discovery/download/install
 
 | Extension | Feed | Public status |
 | --- | --- | --- |
-| uddeIM Joomla 6 Enhanced | `updates/com_uddeim.xml` | `6.0.0-beta2` published and advertised; native 5.6.3 → beta2 update gate GREEN |
+| uddeIM Joomla 6 Enhanced | `updates/com_uddeim.xml` | `6.0.0` stable published and advertised; final stable native updater acceptance pending |
 
 More Joomla extensions can be added here later using the same release standard.
 
@@ -155,12 +155,12 @@ Current release direction:
 | Item | Status |
 | --- | --- |
 | Release line | `6.0.x` |
-| Current candidate | `6.0.0-beta2` |
-| First stable target | `6.0.0` |
+| Current stable release | `6.0.0` |
+| First stable target | `6.0.0` — achieved |
 | Joomla target | Joomla 6.0 / 6.1 |
 | PHP target | PHP 8.3+ |
-| Native update feed | Beta 2 advertised and native update accepted |
-| Public beta release | `6.0.0-beta2` published; `6.0.0-beta1` retained as immutable withdrawn prerelease |
+| Native update feed | Stable `6.0.0` advertised; final stable native updater acceptance pending |
+| Public releases | `6.0.0` stable published; `6.0.0-beta2` retained as accepted prerelease; `6.0.0-beta1` retained as immutable withdrawn prerelease |
 
 Canonical uddeIM update feed:
 
@@ -168,7 +168,7 @@ Canonical uddeIM update feed:
 https://raw.githubusercontent.com/koelmanlabs/joomla-distribution/main/updates/com_uddeim.xml
 ```
 
-The feed does not currently advertise a release. `6.0.0-beta1` remains published as an immutable withdrawn prerelease after Joomla-native testing proved a Windows ZIP path-separator packaging defect. `6.0.0-beta2` is published as a pre-release and the update feed advertises that exact asset. It passed both the local forward-slash/extraction gate and the automated Playwright package gate (1/1 PASS). The remaining gate is Joomla-native discovery/download/unpack/checksum/install acceptance from 5.6.3. After the exact beta2 asset is published and its SHA-256 is recorded in the feed, it must still pass Joomla-native discovery/download/unpack/checksum/install acceptance from 5.6.3.
+The update feed now advertises the exact stable `6.0.0` release asset. The frozen stable package passed exact-package portability, focused install/config-preservation acceptance, and the final full canonical regression at **98/98 PASS** on Joomla 6.1.2. `6.0.0-beta2` remains published as the accepted prerelease that previously proved the public Joomla-native updater path; `6.0.0-beta1` remains an immutable withdrawn prerelease after its Windows ZIP path-separator packaging defect. The remaining stable-release gate is Joomla-native public discovery/download/unpack/checksum/install acceptance against the exact `6.0.0` feed entry.
 
 ## For Joomla administrators
 
@@ -220,5 +220,6 @@ Verified:
 The automated non-destructive post-state gate
 `J60-ENH-UPDATE-GITHUB-001D-POST` passed 1/1 in 5.7s.
 
-The full canonical regression baseline remains reserved for the promotion/stable
-release boundary.
+The promotion/stable full canonical regression is now complete at **98/98 PASS**
+against uddeIM 6.0.0. The remaining release gate is the final Joomla-native
+public updater acceptance against the stable feed.
